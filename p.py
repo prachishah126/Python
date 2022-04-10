@@ -126,10 +126,12 @@ def intersecting_points_polygon(polygon1, polygon2):
                 
             line.clear()
     return intersecting_points
+
 polygon1 = [[-10, 30], [10, 20], [15, 10], [-20, 10],[-10, 30]]
 polygon2 = [[-20, 25], [15, 25], [15, 15], [-20, 20],[-20, 25]]
+
 intersecting_points = intersecting_points_polygon(polygon1, polygon2)
-print(intersecting_points)
+
 
 polygon2 = [[-10, 30], [10, 20], [15, 10], [-20, 10]]
 polygon1 = [[-20, 25], [15, 25], [15, 15], [-20, 20],[-20,25]]
@@ -156,9 +158,10 @@ for i in range(len(polygon2)):
                 my_list.append(list(point_x1))
     count1 = 0
     count2 = 0
-print(my_list)
+
+
 intersecting_points.append(my_list[0])
-print(intersecting_points)
+
 
 
 angles = []
@@ -186,10 +189,11 @@ while(temporary_number < len(angles)-1):
     temporary_number+= 1
 
 
-points2 =[[-15.333333333333332, 19.333333333333336], [12.307692307692308, 15.384615384615383], [10, 20], [0.0, 25.0], [-12.5, 25.0],[-15.333333333333332, 19.333333333333336]]
 
+points2 = intersecting_points.append(intersecting_points[0])
 det = 0
-for index in range(len(points2)-1):
-    det += (points2[index][0]*points2[index+1][1]) - (points2[index][1]*points2[index+1][0])
+for index in range(len(intersecting_points)-1):
+    det += (intersecting_points[index][0]*intersecting_points[index+1][1]) - (intersecting_points[index][1]*intersecting_points[index+1][0])
     
-print(det/2)
+area = 0.5 * det
+print(area)
